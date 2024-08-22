@@ -36,7 +36,7 @@ public:
     }
 
     void displayBill() {
-        cout << fixed << setprecision(2); // To display charges with two decimal places
+        cout << fixed << setprecision(2); 
         cout << "The total charges for " << name << " are: Rs " << charges << endl;
     }
 };
@@ -53,16 +53,13 @@ int main() {
 
 for (int i = 0; i < numUsers; ++i) {
         cout << "Enter the name of user " << i + 1 << ": ";
-        cin >> ws; // to consume any trailing newline character
+        cin >> ws; 
         getline(cin, name);
         cout << "Enter the number of units consumed by " << name << ": ";
         cin >> units;
 
-        // Set data and calculate charges directly in the loop
         users[i].name = name;
         users[i].units = units;
-
-        // Calculate charges directly in the loop
         users[i].charges = 0;
 
         if (users[i].units <= 100) {
@@ -85,7 +82,7 @@ for (int i = 0; i < numUsers; ++i) {
     }
  cout << endl << "Electricity Bills:" << endl;
     for (int i = 0; i < numUsers; ++i) {
-        cout << fixed << setprecision(2); // To display charges with two decimal places
+        cout << fixed << setprecision(2); 
         cout << "The total charges for " << users[i].name << " are: Rs " << users[i].charges << endl;
     }
 
